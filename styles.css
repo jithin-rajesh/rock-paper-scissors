@@ -1,0 +1,101 @@
+@font-face {
+    font-family: Arcade;
+    src: url(fonts/PressStart2P-vaV7.ttf);
+}
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header {
+    height: 100px;
+    font-family: Arcade;
+    font-size: 35px;
+    color: #5cefff;
+    margin: 30px;
+    text-align: center;
+    text-shadow: 3px 2px red;
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    padding: 50px;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 30px;
+    font-size: 80px;
+    background-color: #5cefff;
+    border-radius: 30px;
+    border: 10px;
+    border-style: solid;
+    border-color: red;
+}
+
+.result {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.content-text {
+    font-family: Arcade;
+    font-size: 25px;
+    color: #5cefff;
+    text-align: center;
+    text-shadow: 2px 2px red;    
+}
+
+.subtext {
+    font-family: Arcade;
+    font-size: 15px;
+    color: #5cefff;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    margin: 20px 0px;
+    max-width: 200px;
+}
+
+.score-text {
+    font-family: Arcade;
+    font-size: 18px;
+    color: #5cefff;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    margin: 20px 0px;
+    max-width: 250px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.score-text {
+    display: flex;
+    gap: 10px;
+}
+
+.winner {
+    font-family: Arcade;
+    font-size: 18px;
+    color: #5cefff;
+    text-align: center;
+    text-shadow: 2px 2px red;
+    margin: 30px 0px 50px 0px; 
+}
+
+.footer {
+    display: flex;
+    color: white;
+    height: 20px;
+    margin: 60px 0px 20px 0px;
+    align-items: center;
+}
