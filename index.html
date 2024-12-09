@@ -1,89 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Function scope example</title>
+    <title>Rock Paper Scissors</title>
+    <script src = "script.js" defer></script>
   </head>
-<body>
-
-  <script>
-        function getComputerChoice()
-        {
-          let computerChoice = Math.floor(Math.random()*3);
-
-          switch(computerChoice)
-          {
-            case 0:
-                  return "ROCK";
-            case 1:
-                  return "PAPER";
-            case 2:
-                  return "SCISSORS";
-          }
-        }
-
-        function getHumanChoice()
-        {
-          let humanChoice = prompt("ROCK, PAPER or SCISSORS?").toUpperCase();
-          return humanChoice;
-        }
-
-        let humanScore = 0;
-        let computerScore = 0;
-
-        
-        function playRound(humanChoice, computerChoice)
-        {
-          let roundWinner;
-          if (humanChoice == computerChoice)
-          {
-            roundWinner = "It's a TIE!"; 
-          }
-          else if ((humanChoice == "ROCK" && computerChoice == "SCISSORS")||(humanChoice == "SCISSORS" && computerChoice =='PAPER')||(humanChoice == "PAPER" && computerChoice == "ROCK"))
-          {
-            roundWinner = "You WIN!";
-            humanScore++;
-          }
-          else
-          {
-            roundWinner = "The Computer WINS!";
-            computerScore++;
-          }
-          alert(roundWinner + "\nComputer Chose: " + computerChoice + "\nYou Chose: " + humanChoice + "\nSCORE: \nYou: " + humanScore + "\nComputer: " + computerScore);
-          
-        }
-
-        function displayWinner(computerScore, humanScore)
-        {
-          if(computerScore > humanScore)
-          {
-            alert("The computer WINS the game!");
-          }
-          else if (humanScore > computerScore)
-          {
-            alert("You WIN the game!");
-          }
-          else 
-          {
-            alert("It's a TIE!");
-          }
-        }
-
-        function playGame()
-        {
-          for(let i = 0; i < 5; i++)
-          {
-            const humanSelection = getHumanChoice();
-            const computerSelection = getComputerChoice();
-            playRound(humanSelection,computerSelection);
-          }
-
-          displayWinner(computerScore, humanScore);
-          
-        }
-
-        playGame();
-  </script>
+<body>  
+        <div class = "game-end"></div>
+        <div class = "header">ROCK, PAPER, SCISSORS</div>
+        <div class = "content">
+            <div class ="content-text">CHOOSE:</div>
+            <div class = "selection">
+              <button data-tilt data-tilt-scale="1.1" id = "ROCK">🪨</button>
+              <button data-tilt data-tilt-scale="1.1" id = "PAPER">📜</button>
+              <button data-tilt data-tilt-scale="1.1" id = "SCISSORS">✂️</button>
+            </div>
+            <div class = "content-text">FIRST TO FIVE WINS!</div>
+            <div class = "result">
+              <div class = "human">
+                <button class = "human-choice">🍵</button>
+                <div class = "subtext">Your Choice</div>
+              </div>
+              <div class = "computer">
+                <button class = "computer-choice">☕️</button>
+                <div class = "subtext">AI's Choice</div>
+              </div>
+            </div>
+            <div class = "winner">Game in Progress...</div>
+            <div class = "content-text">SCORE:</div>
+            <div class = "score">
+              <div class = score-text>YOUR SCORE:
+              <div class = "human-score">0</div>
+              </div>
+              <div class = "score-text">AI SCORE:
+              <div class = "computer-score">0</div>
+              </div>
+            </div>
+        </div>
+        <div class = "footer">Copyright ©️ Stick Insect 2024</div>
+        <script src = "vanilla-tilt.js"></script>
 </body>
 </html>
