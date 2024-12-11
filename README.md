@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-A simple rock paper scissors game that runs on console
+An interactive Rock, Paper, Scissors Game with an Interactive UI
